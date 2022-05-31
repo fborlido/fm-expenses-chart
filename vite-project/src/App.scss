@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+$ff: "DM Sans", sans-serif;
+$fs: 18px;
+$fw: 400;
+
+$primary: hsl(10, 79%, 65%);
+$secondary: hsl(186, 34%, 60%);
+
+$text: hsl(25, 47%, 15%);
+$text-light: hsl(28, 10%, 53%);
+$bg: hsl(27, 66%, 92%);
+$bg-light: hsl(33, 100%, 98%);
+
+body {
+    background-color: $bg;
+    font-size: $fs;
+    font-family: $ff;
+    font-weight: $fw;
+    color: $text;
+}
+
+.primary {
+    background-color: $primary;
+}
+
+.secondary {
+    background-color: $secondary;
+}
+
+.light {
+    background-color: $bg-light;
+}
+
+.text-light {
+    color: $text-light;
+}
+
+.text-white {
+    color: $bg-light;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.size-big {
+    font-size: 1.8rem;
+}
+
+.size-bigger {
+    font-size: 2rem;
+}
+
+.card {
+    border-radius: 1rem;
+    padding: 1.2rem;
+    width: 100%;
+    max-width: 550px;
+}
+
+.apart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullscreen {
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.divider {
+    width: 100%;
+    height: 3px;
+    background-color: $bg;
+    margin: auto;
+}
+
+.datapoint {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+    height: 90%;
+}
+
+.bar {
+    border-radius: 0.5rem;
+    width: 100%;
+    position: relative;
+    transition: opacity 200ms ease-in-out;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.bars {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 400px;
+    gap: 1em;
+}
+
+.price {
+    background-color: $text;
+    color: $bg-light;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    top: -3rem;
+    right: 50%;
+    transform: translate(50%, -100%);
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+
+    &-active {
+        transform: translate(50%, 0%);
+        opacity: 1;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
